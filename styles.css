@@ -1,0 +1,118 @@
+/* the props */
+@import "https://unpkg.com/open-props";
+
+html {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    /* background: radial-gradient(ellipse at center, rgba(44, 62, 80, 1) 0%, rgba(52, 152, 219) 92%, rgba(51, 152, 219, 1) 100%); */
+    background: radial-gradient(ellipse at center, rgba(44, 62, 80, 1) 0%, var(--violet-5) 92%, var(--violet-9) 100%);
+    overflow: hidden;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+
+}
+
+.triangle {
+    margin: 0 auto;
+    transform: scale(0.4, 0.4);
+    height: 500px;
+}
+
+.left {
+    width: 140px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transform: rotate(30deg)
+}
+
+.left div {
+    transform: rotate(30deg) skew(30deg);
+    /* background: #006495; */
+    background: var(--violet-11);
+    width: 100%;
+    height: 500px;
+}
+
+.left div::after {
+    content: "";
+    /* background: #006495; */
+    background: var(--violet-11);
+    width: 330px;
+    height: 100px;
+    position: absolute;
+    right: -325px;
+}
+
+.right {
+    width: 140px;
+    height: 500px;
+    transform: rotate(-30deg);
+    position: absolute;
+    left: 323px;
+    top: -60px;
+    z-index: 99;
+}
+
+.right div {
+    transform: rotate(30deg) skew(30deg);
+    /* background: #0093d1; */
+    background: var(--violet-4);
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    right: 0;
+}
+
+.right div::after {
+    content: "";
+    /* background: #0093d1; */
+    background: var(--violet-4);
+    width: 322px;
+    height: 100px;
+    position: absolute;
+    right: 82px;
+    bottom: 0;
+    transform: skew(-49deg);
+}
+
+.bottom {
+    width: 140px;
+    height: 500px;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 214px;
+    top: 250px;
+}
+
+.bottom div {
+    transform: rotate(30deg) skew(30deg);
+    /* background: #004c70; */
+    background: var(--violet-12);
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    right: 0;
+}
+
+.bottom div::after {
+    content: "";
+    /* background: #004c70; */
+    background: var(--violet-12);
+    width: 462px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 400px;
+}
